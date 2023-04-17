@@ -1,6 +1,8 @@
 # hp-scan-wrapper
 This script wraps around [hp-scan](https://developers.hp.com/hp-linux-imaging-and-printing/tech_docs/man_pages/scan) for easier multi-page scans and because i wanted to learn docopt.
 
+My scanner isn't able to scan duplex, so duplex scanning works by scanning pages 1,3,[...] and then turning the paper around to scan pages 10,8,[...]. Afterwards they get sorted and appended in the correct order.
+
 # Known errors
 Using higher resolutions and/or scanning many pages at once, you may run into PIL.Image.DecompressionBombError due to the filesize limit. 
 
